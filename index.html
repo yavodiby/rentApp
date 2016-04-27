@@ -23,10 +23,15 @@
 
         <h1>{{ title }}</h1>
         <h2>{{ promo }}</h2>
-        <label>Search:</label>
-        <h2>
-       <input type="text" ng-model="query" placeholder="search items">
-        </h2>
+          
+    <nav class="navbar">
+     <div class="nav navbar-nav">
+      <form class="form-inline pull-xs-right">
+       <input class="form-control" type="text" placeholder="Search" ng-model="query">
+       <button class="btn btn-success-outline" type="submit">Search</button>
+      </form>
+  </div>
+    </nav>
 
         <div ng-repeat="rent in rents | filter:query" class="col-md-6">
            
